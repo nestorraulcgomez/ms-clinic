@@ -1,20 +1,24 @@
 package com.nrcg.ms_clinic.models;
 
+import java.util.List;
+
 public class Patient {
 
-    public String id;
-    public String firtname;
-    public String lastname;
-    public String gender;
+    private int id;
+    private String firtname;
+    private String lastname;
+    private String gender;
+    private List<Attention> medicalRecord;
 
-    public Patient(String id, String firtname, String lastname, String gender) {
+    public Patient(int id, String firtname, String lastname, String gender, List<Attention> medicalRecord) {
         this.id = id;
         this.firtname = firtname;
         this.lastname = lastname;
         this.gender = gender;
+        this.medicalRecord = medicalRecord;
     }
 
-    public String getId() {
+    public int getId() {
         return id;
     }
 
@@ -28,6 +32,10 @@ public class Patient {
 
     public String getGender() {
         return gender;
+    }
+
+    public List<Attention> getMedicalRecord() {
+        return medicalRecord;
     }
 
 }
